@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/woody_color"
+    tools:context=".MainActivity">
+
+    <!-- Heading: Scrambled Word -->
+    <TextView
+        android:id="@+id/scrambledWordTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Scrambled Word"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Image Section -->
+    <LinearLayout
+        android:id="@+id/imageLinearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/scrambledWordTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Image 1 -->
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+        android:layout_weight="1"
+        android:src="@drawable/the"
+        android:layout_margin="4dp"
+        android:scaleType="fitXY"
+        android:background="@drawable/image_border"/>
+
+        <!-- Image 2 -->
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_weight="1"
+            android:src="@drawable/scrabble"
+            android:layout_margin="4dp"
+            android:scaleType="fitXY"
+            android:background="@drawable/image_border"/>
+
+        <!-- Image 3 -->
+        <ImageView
+            android:id="@+id/image3"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_weight="1"
+            android:src="@drawable/game"
+            android:layout_margin="4dp"
+            android:scaleType="fitXY"
+            android:background="@drawable/image_border"/>
+    </LinearLayout>
+
+    <!-- User Guess Input -->
+    <EditText
+        android:id="@+id/guessEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Your Guess"
+        android:inputType="textPersonName"
+        android:padding="16dp"
+        android:background="@drawable/edit_text_background"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/imageLinearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Submit Guess Button -->
+    <Button
+        android:id="@+id/submitGuessButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Submit Guess"
+        android:backgroundTint="@color/custom_border_color"
+        android:textColor="@color/white"
+        android:padding="16dp"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/guessEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Give Up Button -->
+    <Button
+        android:id="@+id/giveUpButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Give Up"
+        android:backgroundTint="@color/red"
+        android:textColor="@color/white"
+        android:padding="16dp"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/submitGuessButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Definition TextView -->
+    <TextView
+        android:id="@+id/definitionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/giveUpButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/loadingProgressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/definitionTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- New Word Button -->
+    <Button
+        android:id="@+id/newWordButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="New Word"
+        android:backgroundTint="@color/blue"
+        android:textColor="@color/white"
+        android:padding="16dp"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/loadingProgressBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

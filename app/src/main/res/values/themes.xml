@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.WordScrambleGame" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/custom_border_color</item>
+        <item name="colorPrimaryVariant">@color/custom_border_color</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/custom_border_color</item>
+        <item name="colorSecondaryVariant">@color/custom_border_color</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- Status Bar Color -->
+        <item name="android:statusBarColor">@color/custom_border_color</item>
+
+        <!-- Optional: Navigation Bar Color -->
+        <item name="android:navigationBarColor">@color/custom_border_color</item>
+
+        <!-- Other theme attributes -->
+    </style>
+</resources>
