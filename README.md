@@ -44,4 +44,4 @@ The committed configuration targets Android API 34, supports API 24 and newer, a
 
 ## Attribution and reuse
 
-External APIs, dependencies, the Gradle wrapper, and bundled artwork have their own terms. The provenance of the bundled artwork has not been documented, so this repository should not be treated as permission to redistribute those images.
+Original application code and documentation are available under the [MIT License](LICENSE). External APIs, dependencies, the Gradle wrapper, and bundled artwork have their own terms. Artwork provenance has not been documented; the MIT grant does not include permission to redistribute those images. See [license scope and third-party materials](THIRD_PARTY_NOTICES.md).
